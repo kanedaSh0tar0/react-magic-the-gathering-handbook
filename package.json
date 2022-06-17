@@ -1,6 +1,7 @@
 {
   "name": "mtg",
   "version": "0.1.0",
+  "homepage": "https://kanedash0tar0.github.io/react-magic-the-gathering-handbook/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
