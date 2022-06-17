@@ -1,0 +1,38 @@
+.topPanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.favorite {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.favorite svg {
+    width: 50px;
+    fill: var(--colorDefault);
+    transition: 0.1s linear;
+}
+
+.favorite_active svg {
+    fill: var(--colorRed);
+}
+
+.favorite svg:hover {
+    fill: var(--colorRed);
+    transform: scale(1.05);
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--colorDefault);
+}
+
+.image {
+    max-width: 360px;
+}

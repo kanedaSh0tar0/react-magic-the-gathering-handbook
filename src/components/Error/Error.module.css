@@ -1,0 +1,14 @@
+.error {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.error__text {
+    font-size: 40px;
+    color: var(--colorWhite);
+}
+
+.error__image {
+    width: 100%;
+}

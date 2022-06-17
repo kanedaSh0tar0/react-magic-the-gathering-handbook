@@ -1,0 +1,13 @@
+.link {
+    color: var(--colorDefault);
+    font-size: var(--fontSizeHeader);
+}
+
+.linkActive {
+    color: var(--colorRed);
+    font-size: var(--fontSizeHeader);
+}
+
+.linkActive svg {
+    fill: var(--colorRed);
+}

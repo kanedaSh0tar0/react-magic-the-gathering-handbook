@@ -1,0 +1,27 @@
+a {
+    text-decoration: none;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    margin: 0 2px;
+}
+
+.button_active {
+    color: var(--colorRed);
+    border-color: var(--colorRed);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    margin: 0 2px;
+    font-size: 40px;
+    pointer-events: none;
+}
