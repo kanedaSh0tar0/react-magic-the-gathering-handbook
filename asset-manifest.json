@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-magic-the-gathering-handbook/static/css/main.0671d699.css",
-    "main.js": "/react-magic-the-gathering-handbook/static/js/main.28e2b87a.js",
-    "static/media/logo.png": "/react-magic-the-gathering-handbook/static/media/logo.a963e9f20e210f076f01.png",
-    "static/media/cardBack.jpg": "/react-magic-the-gathering-handbook/static/media/cardBack.b8d645d695f1a8cd25b1.jpg",
+    "main.css": "/react-magic-the-gathering-handbook/static/css/main.930d3cff.css",
+    "main.js": "/react-magic-the-gathering-handbook/static/js/main.9f1f528f.js",
+    "static/media/cardBack.webp": "/react-magic-the-gathering-handbook/static/media/cardBack.fffaba4bcc2142895faf.webp",
     "static/media/error.jpg": "/react-magic-the-gathering-handbook/static/media/error.27ab0ac26149564fc54f.jpg",
+    "static/media/logo.webp": "/react-magic-the-gathering-handbook/static/media/logo.3548399d4aff71c0abea.webp",
     "static/media/AveriaSerifLibre-LightItalic.eot": "/react-magic-the-gathering-handbook/static/media/AveriaSerifLibre-LightItalic.b5c9f8bb32342ae08575.eot",
     "static/media/AveriaSerifLibre-LightItalic.ttf": "/react-magic-the-gathering-handbook/static/media/AveriaSerifLibre-LightItalic.0b5eaddcb587844a0ff9.ttf",
     "static/media/AveriaSerifLibre-Italic.eot": "/react-magic-the-gathering-handbook/static/media/AveriaSerifLibre-Italic.48d7c7da6afb5736e97f.eot",
@@ -34,11 +34,11 @@
     "static/media/W.svg": "/react-magic-the-gathering-handbook/static/media/W.99c7fe1b9600148fbeed55dc7729eb2e.svg",
     "static/media/B.svg": "/react-magic-the-gathering-handbook/static/media/B.7f78a23faaceb72cf1d01f86dedabf9e.svg",
     "index.html": "/react-magic-the-gathering-handbook/index.html",
-    "main.0671d699.css.map": "/react-magic-the-gathering-handbook/static/css/main.0671d699.css.map",
-    "main.28e2b87a.js.map": "/react-magic-the-gathering-handbook/static/js/main.28e2b87a.js.map"
+    "main.930d3cff.css.map": "/react-magic-the-gathering-handbook/static/css/main.930d3cff.css.map",
+    "main.9f1f528f.js.map": "/react-magic-the-gathering-handbook/static/js/main.9f1f528f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0671d699.css",
-    "static/js/main.28e2b87a.js"
+    "static/css/main.930d3cff.css",
+    "static/js/main.9f1f528f.js"
   ]
 }
