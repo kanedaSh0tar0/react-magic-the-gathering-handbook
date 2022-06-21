@@ -6,7 +6,7 @@
     min-height: 50px;
 
     color: var(--colorDefault);
-    font-size: var(--fontSizeUI);
+    font-size: var(--fontSizeSmall);
 
     background: transparent;
     border: 2px solid var(--colorDefault);

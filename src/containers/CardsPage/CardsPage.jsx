@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -8,7 +8,7 @@ import CardsPageControls from '../../components/CardsNavigation/CardsPageControl
 
 import { getApiResourse } from '../../utils/getApiResourse'
 import { getHeadersLinks } from '../../utils/getCardsData'
-import { CARDS_LINK, QUERY_PARAMS } from '../../constants/apiLinks'
+import { CARDS_LINK, QUERY_PARAMS, SORT_WITHOUT_IMG } from '../../constants/apiLinks'
 
 // import styles from './CardsPage.module.css'
 
@@ -22,6 +22,7 @@ function CardsPage({ setErrorResponse }) {
     const [loading, setLoading] = useState(true)
     const searchResponse = useSelector(state => state.searchResponse)
     const pageSize = 48
+    const prevSearchReq = useRef(searchResponse)
 
 
     async function getCardsList(url) {
@@ -39,7 +40,8 @@ function CardsPage({ setErrorResponse }) {
                 }
             })
 
-            if (totalPage !== Math.ceil(responseHeaders.get('Total-Count') / pageSize)) {
+            if (prevSearchReq.current !== searchResponse) {
+                prevSearchReq.current = searchResponse
                 setCounterPage(1)
             }
 
@@ -56,7 +58,7 @@ function CardsPage({ setErrorResponse }) {
 
     useEffect(() => {
         setLoading(true)
-        getCardsList(`${CARDS_LINK}${QUERY_PARAMS.START}${searchResponse && QUERY_PARAMS.SEARCH_NAME + searchResponse + QUERY_PARAMS.AND}${QUERY_PARAMS.PAGE}${counterPage}${QUERY_PARAMS.AND}${QUERY_PARAMS.PAGE_SIZE}${pageSize}`)
+        getCardsList(`${CARDS_LINK}${QUERY_PARAMS.START}${searchResponse && QUERY_PARAMS.SEARCH_NAME + searchResponse + QUERY_PARAMS.AND}${QUERY_PARAMS.PAGE}${counterPage}${QUERY_PARAMS.AND}${QUERY_PARAMS.PAGE_SIZE}${pageSize}${QUERY_PARAMS.AND}${searchResponse === '' && QUERY_PARAMS.CONTAINSE + SORT_WITHOUT_IMG}`)
     }, [searchResponse, counterPage])
 
     return (

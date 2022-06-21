@@ -14,6 +14,10 @@ span {
     margin-bottom: 20px;
 }
 
+.name {
+    font-size: var(--fontSizeBig);
+}
+
 .manaCost {
     display: flex;
     align-items: center;
@@ -42,18 +46,17 @@ span {
     padding: 10px;
     border-radius: 10px;
 
+    font-weight: lighter;
     line-height: 130%;
     white-space: pre-wrap;
     color: var(--colorBlack);
 }
 
 .originalText {
-    font-weight: lighter;
 }
 
 .flavor {
     margin-top: 20px;
-    font-weight: 300;
     font-style: italic;
 }
 

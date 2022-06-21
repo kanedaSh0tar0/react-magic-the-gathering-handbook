@@ -11,7 +11,7 @@
     outline: none;
     color: var(--colorBlack);
     font-family: var(--fontFamily);
-    font-size: var(--fontSizeUI);
+    font-size: var(--fontSizeSmall);
 }
 
 .cancel {

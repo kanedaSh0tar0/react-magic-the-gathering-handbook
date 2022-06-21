@@ -4,7 +4,7 @@ import FavoriteLink from '../FavoriteLink/FavoriteLink'
 import ThemeButton from '../UI/ThemeButton/ThemeButton'
 
 import styles from './Header.module.css'
-import Logo from './img/logo.png'
+import Logo from './img/logo.webp'
 
 function Header() {
     return (
@@ -13,12 +13,12 @@ function Header() {
 
             <nav className={styles.navList}>
                 <div className={styles.mainLinks}>
-                    <CustomLink to="/">Home</CustomLink>
-                    <CustomLink to="cards">Cards</CustomLink>
+                    <CustomLink classes={styles.link} to="/">Home</CustomLink>
+                    <CustomLink classes={styles.link} to="cards">Cards</CustomLink>
                 </div>
 
                 <div className={styles.functionalLinks}>
-                    <CustomLink to="favorites"><FavoriteLink /></CustomLink>
+                    <CustomLink classes={styles.linkImg} to="favorites"><FavoriteLink /></CustomLink>
                     <ThemeButton />
                 </div>
             </nav>

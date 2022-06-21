@@ -78,7 +78,7 @@ function CardInfo({
         <div className={styles.container}>
 
             <div className={styles.title}>
-                <h2 className={styles.name}>{name}</h2>
+                <h2 className={styles.name}>{name.replace('//', 'or')}</h2>
 
                 <ul className={styles.manaCost}>
                     {manaItemsLinks && manaItemsLinks.map(manaLink => { return manaLink })}

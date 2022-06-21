@@ -1,6 +1,6 @@
 import cn from 'classnames'
 
-import cardBackc from './cardBack.jpg'
+import cardBack from './image/cardBack.webp'
 
 import styles from './CardImage.module.css'
 
@@ -9,7 +9,7 @@ function CardImage({ src, alt, classes }) {
         <div className={cn(styles.container, classes)}>
             <img
                 className={styles.image}
-                src={src ? src : cardBackc}
+                src={src ? src : cardBack}
                 alt={alt}
             />
         </div>
