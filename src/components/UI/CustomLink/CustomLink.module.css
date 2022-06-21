@@ -1,0 +1,11 @@
+.link {
+    color: var(--colorDefault);
+}
+
+.linkActive {
+    color: var(--colorRed);
+}
+
+.linkActive svg {
+    fill: var(--colorRed);
+}

@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+    min-width: 300px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 55px 10px 15px;
+    border: 3px solid var(--colorDefault);
+    border-radius: 3px;
+    outline: none;
+    color: var(--colorBlack);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeSmall);
+}
+
+.cancel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    fill: var(--colorBlack);
+    transition: fill 0.1s linear;
+    cursor: pointer;
+}
+
+.cancel_notValue {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.cancel:hover:not(.cancel_notValue) {
+    fill: var(--colorRed);
+}
