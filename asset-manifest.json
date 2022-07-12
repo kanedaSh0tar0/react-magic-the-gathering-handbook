@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-magic-the-gathering-handbook/static/css/main.930d3cff.css",
-    "main.js": "/react-magic-the-gathering-handbook/static/js/main.9f1f528f.js",
+    "main.css": "/react-magic-the-gathering-handbook/static/css/main.7afeb1cf.css",
+    "main.js": "/react-magic-the-gathering-handbook/static/js/main.029ab766.js",
     "static/media/cardBack.webp": "/react-magic-the-gathering-handbook/static/media/cardBack.fffaba4bcc2142895faf.webp",
     "static/media/error.jpg": "/react-magic-the-gathering-handbook/static/media/error.27ab0ac26149564fc54f.jpg",
     "static/media/logo.webp": "/react-magic-the-gathering-handbook/static/media/logo.3548399d4aff71c0abea.webp",
@@ -34,11 +34,11 @@
     "static/media/W.svg": "/react-magic-the-gathering-handbook/static/media/W.99c7fe1b9600148fbeed55dc7729eb2e.svg",
     "static/media/B.svg": "/react-magic-the-gathering-handbook/static/media/B.7f78a23faaceb72cf1d01f86dedabf9e.svg",
     "index.html": "/react-magic-the-gathering-handbook/index.html",
-    "main.930d3cff.css.map": "/react-magic-the-gathering-handbook/static/css/main.930d3cff.css.map",
-    "main.9f1f528f.js.map": "/react-magic-the-gathering-handbook/static/js/main.9f1f528f.js.map"
+    "main.7afeb1cf.css.map": "/react-magic-the-gathering-handbook/static/css/main.7afeb1cf.css.map",
+    "main.029ab766.js.map": "/react-magic-the-gathering-handbook/static/js/main.029ab766.js.map"
   },
   "entrypoints": [
-    "static/css/main.930d3cff.css",
-    "static/js/main.9f1f528f.js"
+    "static/css/main.7afeb1cf.css",
+    "static/js/main.029ab766.js"
   ]
 }
