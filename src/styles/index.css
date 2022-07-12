@@ -1,18 +1,19 @@
 @import url(./fonts/fonts.css);
 
 :root {
+    /* COLORS */
     --colorBlack: #1c1916;
     --colorDarkGrey: #2e2e2e;
     --colorWhite: #f4f1ea;
     --colorRed: #bb0a21;
 
+    /* FONT */
     --fontSizeBig: 26px;
+    --fontSizeMedium: 22px;
     --fontSizeSmall: 16px;
-
     --fontFamily: "Averia Serif Libre", cursive;
 
-    --cardItemSize: 250px;
-
+    /* MARGIN */
     --marginSmall: 5px;
     --marginMedium: 10px;
 

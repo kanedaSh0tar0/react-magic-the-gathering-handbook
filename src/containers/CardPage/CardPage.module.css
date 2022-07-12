@@ -36,3 +36,11 @@
 .image {
     max-width: 360px;
 }
+
+@media (max-width: 840px) {
+    .mainContent {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--marginMedium) 0;
+    }
+}

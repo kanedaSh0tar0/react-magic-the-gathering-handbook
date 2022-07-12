@@ -1,0 +1,131 @@
+.container {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+@media (any-hover: hover) {
+    .container:hover .line {
+        background: var(--colorRed);
+    }
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    border-radius: 2px;
+    background: var(--colorDefault);
+    transition: 0.2s linear;
+}
+
+.burgerOpen {
+    background: var(--colorWhite);
+}
+
+.line.openLine:nth-child(1) {
+    top: 0;
+}
+
+.line.openLine:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line.openLine:nth-child(3) {
+    top: calc(100% - 6px);
+}
+
+.line.closeLine:nth-child(4) {
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.line.closeLine:nth-child(5) {
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.lineAnimationClose .openLine:nth-child(1) {
+    animation: closeOpenLine 0.3s backwards;
+    animation-delay: 0.3s;
+}
+
+.lineAnimationClose .openLine:nth-child(2) {
+    animation: closeOpenLine 0.3s backwards;
+    animation-delay: 0.4s;
+}
+
+.lineAnimationClose .openLine:nth-child(3) {
+    animation: closeOpenLine 0.3s backwards;
+    animation-delay: 0.5s;
+}
+
+.lineAnimationClose .closeLine {
+    animation: closeCloseLine 0.3s backwards;
+}
+
+@keyframes closeOpenLine {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes closeCloseLine {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.lineAnimationOpen .openLine:nth-child(1) {
+    animation: openOpenLine 0.3s forwards;
+}
+
+.lineAnimationOpen .openLine:nth-child(2) {
+    animation: openOpenLine 0.3s forwards;
+    animation-delay: 0.1s;
+}
+
+.lineAnimationOpen .openLine:nth-child(3) {
+    animation: openOpenLine 0.3s forwards;
+    animation-delay: 0.2s;
+}
+
+.lineAnimationOpen .closeLine {
+    animation: openCloseLine 0.3s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes openOpenLine {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes openCloseLine {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

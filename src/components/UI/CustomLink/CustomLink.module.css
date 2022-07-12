@@ -9,3 +9,13 @@
 .linkActive svg {
     fill: var(--colorRed);
 }
+
+@media (max-width: 640px) {
+    .link {
+        color: var(--colorWhite);
+    }
+
+    .linkActive {
+        color: var(--colorRed);
+    }
+}
