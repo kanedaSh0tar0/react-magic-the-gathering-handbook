@@ -3,3 +3,11 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media (max-width: 920px) {
+    .cardsControls {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px 0;
+    }
+}

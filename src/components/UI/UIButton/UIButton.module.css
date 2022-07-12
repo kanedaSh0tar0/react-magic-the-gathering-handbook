@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 50px;
-    min-height: 50px;
+    width: 50px;
+    height: 50px;
 
     color: var(--colorDefault);
     font-size: var(--fontSizeSmall);
@@ -19,5 +19,12 @@
     .button:hover {
         color: var(--colorRed);
         border: 2px solid var(--colorRed);
+    }
+}
+
+@media (max-width: 640px) {
+    .button {
+        width: 40px;
+        height: 40px;
     }
 }

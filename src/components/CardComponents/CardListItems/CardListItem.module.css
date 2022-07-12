@@ -5,8 +5,9 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: var(--cardItemSize);
+    width: 100%;
     min-height: 100%;
+    height: auto;
     padding: 10px;
     background: var(--colorWhite);
     border-radius: 24px;
@@ -14,7 +15,7 @@
 
 .listItemImage {
     margin-bottom: var(--marginMedium);
-    height: 320px;
+    /* height: 320px; */
 }
 
 .titleContainer {
@@ -29,4 +30,10 @@
     font-size: var(--fontSizeBig);
     text-align: center;
     color: var(--colorBlack);
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: var(--fontSizeMedium);
+    }
 }

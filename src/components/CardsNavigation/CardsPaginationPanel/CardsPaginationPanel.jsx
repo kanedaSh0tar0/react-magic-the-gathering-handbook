@@ -12,30 +12,45 @@ function CardsPaginationPanel({ moveTo, counterPage, totalPage }) {
     const searchResponse = useSelector(store => store.searchResponse)
 
     useEffect(() => {
-        const maxPages = totalPage > 7 ? 7 : totalPage
         let currentPaginationLinks = []
+        const maxPages = () => {
+            if (totalPage > 7 && window.innerWidth > 640) {
+                return 7
+            }
+            else if (window.innerWidth <= 425) {
+                return 0
+            }
+            else if (totalPage > 7 && window.innerWidth <= 640) {
+                return 5
+            }
+            else return totalPage
+        }
 
         for (let i = 1; i < totalPage; i++) {
             currentPaginationLinks.push(i)
         }
 
-        if (counterPage >= 1 && counterPage <= Math.ceil(maxPages / 2)) {
+
+        if (maxPages() === 0) {
+            currentPaginationLinks = [1, '...', totalPage]
+        }
+        else if (counterPage >= 1 && counterPage <= Math.ceil(maxPages() / 2)) {
             const leftLinks = []
-            for (let i = 1; i < maxPages; i++) {
+            for (let i = 1; i < maxPages(); i++) {
                 leftLinks.push(i)
             }
             totalPage > 7
                 ? currentPaginationLinks = [...leftLinks, '...', totalPage]
                 : currentPaginationLinks = [...leftLinks, totalPage]
         }
-        else if (counterPage > Math.ceil(maxPages / 2) && counterPage <= totalPage - Math.ceil(maxPages / 2)) {
-            const sliced1 = currentPaginationLinks.slice(counterPage - Math.floor(maxPages / 2), counterPage - 1)
-            const sliced2 = currentPaginationLinks.slice(counterPage, (counterPage - 1) + Math.floor(maxPages / 2))
+        else if (counterPage > Math.ceil(maxPages() / 2) && counterPage <= totalPage - Math.ceil(maxPages() / 2)) {
+            const sliced1 = currentPaginationLinks.slice(counterPage - Math.floor(maxPages() / 2), counterPage - 1)
+            const sliced2 = currentPaginationLinks.slice(counterPage, (counterPage - 1) + Math.floor(maxPages() / 2))
             currentPaginationLinks = [1, '...', ...sliced1, counterPage, ...sliced2, '...', totalPage]
         }
-        else if (counterPage <= totalPage && counterPage >= totalPage - Math.ceil(maxPages / 2)) {
+        else if (counterPage <= totalPage && counterPage >= totalPage - Math.ceil(maxPages() / 2)) {
             const rightLinks = []
-            for (let i = totalPage; i > totalPage - (maxPages - 1); i--) {
+            for (let i = totalPage; i > totalPage - (maxPages() - 1); i--) {
                 rightLinks.unshift(i)
             }
             totalPage > 7
