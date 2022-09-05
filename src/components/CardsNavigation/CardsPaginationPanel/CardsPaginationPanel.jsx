@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 import { QUERY_PARAMS, CARDS } from '../../../constants/apiLinks'
+import useWindowSize from '../../../hooks/useWindowSize'
+
 import UIButton from '../../UI/UIButton/UIButton'
 
 import styles from './CardsPaginationPanel.module.css'
@@ -10,6 +12,7 @@ import styles from './CardsPaginationPanel.module.css'
 function CardsPaginationPanel({ moveTo, counterPage, totalPage }) {
     const [paginationLinks, setPaginationLinks] = useState([])
     const searchResponse = useSelector(store => store.searchResponse)
+    const size = useWindowSize()
 
     useEffect(() => {
         let currentPaginationLinks = []
@@ -59,7 +62,7 @@ function CardsPaginationPanel({ moveTo, counterPage, totalPage }) {
         } else return
 
         setPaginationLinks(currentPaginationLinks)
-    }, [totalPage, counterPage])
+    }, [totalPage, counterPage, size])
 
     return (
         <div className={styles.panel}>

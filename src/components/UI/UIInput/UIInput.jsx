@@ -29,7 +29,12 @@ function UIInput() {
 
     useEffect(() => {
         const searchParams = new URLSearchParams(location.search)
-        setInputValue(searchResponse || '')
+        setSearchResponse(searchParams || '')
+        setInputValue(searchParams.get('name') || '')
+    }, [])
+
+    useEffect(() => {
+        const searchParams = new URLSearchParams(location.search)
         setSearchResponse(searchParams.get('name') || '')
     }, [location.search, searchResponse])
 

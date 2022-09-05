@@ -5,17 +5,19 @@
 }
 
 .cardList {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: var(--marginMedium);
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     padding: 30px 0;
     list-style: none;
 }
 
 .cardListItem {
-    margin: var(--marginMedium);
     min-width: 200px;
-    width: calc(25% - (var(--marginMedium) * 2));
+    width: 100%;
 }
 
 .notFound {
@@ -24,19 +26,19 @@
 }
 
 @media (max-width: 1124px) {
-    /* .cardList {
-        max-width: calc((var(--cardItemSize) + (var(--marginMedium) * 2)) * 3);
-    } */
-    .cardListItem {
-        margin: var(--marginSmall);
-    }
-    .cardListItem {
-        width: calc(33.333% - (var(--marginMedium) * 2));
+    .cardList {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media (max-width: 680px) {
-    .cardListItem {
-        width: calc(50% - (var(--marginMedium) * 2));
+    .cardList {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .cardList {
+        grid-template-columns: 1fr;
     }
 }
